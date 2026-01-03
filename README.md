@@ -192,13 +192,13 @@ Ensure:
 - `NODE_ENV=production`  
 - `PORT` is set  
 
----
-## Live Demo
+---## Live Demo
 
 The React frontend is being deployed on Vercel.  
 **Status:** Under process.
 
-[Visit Live App]([https://vercel.com/](https://applygate-4s6qx0bt2-shaily-20s-projects.vercel.app)) 
+[Visit Live App](https://applygate-git-main-shaily-20s-projects.vercel.app)
+
 
 ---
 ## Notes & Next Steps
