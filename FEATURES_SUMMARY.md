@@ -386,7 +386,9 @@ Project Root
     │   ├── PostJob.css
     │   ├── PostJob.jsx
     │   └── Signup.jsx
-    
+    └── services/
+        ├── api.js
+        └── authService.js
 ```
 
 ## 💡 Pro Tips
