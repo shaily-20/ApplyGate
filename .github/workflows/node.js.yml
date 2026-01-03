@@ -1,0 +1,15 @@
+- name: Debug info
+  run: |
+    node -v
+    npm -v
+    ls -la
+    cat package.json || true
+
+- name: Install (verbose)
+  run: npm ci --verbose 2>&1 | tee npm-install.log
+
+- name: Upload install log
+  uses: actions/upload-artifact@v3
+  with:
+    name: npm-install-log
+    path: npm-install.log
