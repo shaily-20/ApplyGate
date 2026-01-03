@@ -22,6 +22,73 @@ This repository contains both the **frontend** (Vite + React) and a **lightweigh
 /             --> Frontend (Vite + React)
 /server       --> Backend (Express + SQLite)
 ```
+## 📊 Project Structure
+
+```
+Project Root
+├── Do
+├── eslint.config.js
+├── FEATURES_SUMMARY.md
+├── index.html
+├── LICENSE
+├── package.json
+├── QUICK_START.md
+├── README.md
+├── vite.config.js
+├── public/
+├── server/
+│   ├── db.js
+│   ├── index.js
+│   ├── mockDB.js
+│   ├── package.json
+│   ├── seedData.js
+│   ├── config/
+│   │   └── db.js
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── models/
+│   │   ├── Job.js
+│   │   └── User.js
+│   └── routes/
+│       ├── auth.js
+│       └── jobs.js
+└── src/
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    ├── assets/
+    ├── components/
+    │   ├── AIMatcher.jsx
+    │   ├── Footer.css
+    │   ├── Footer.jsx
+    │   ├── GoogleSignIn.jsx
+    │   ├── Hero.css
+    │   ├── Hero.jsx
+    │   ├── JobCard.css
+    │   ├── JobCard.jsx
+    │   ├── JobListings.css
+    │   ├── JobListings.jsx
+    │   ├── Navbar.css
+    │   └── Navbar.jsx
+    ├── contexts/
+    │   └── AuthContext.jsx
+    ├── pages/
+    │   ├── Auth.css
+    │   ├── HomePage.css
+    │   ├── HomePage.jsx
+    │   ├── JobDetail.css
+    │   ├── JobDetail.jsx
+    │   ├── Jobs.css
+    │   ├── Jobs.jsx
+    │   ├── Login.jsx
+    │   ├── PostJob.css
+    │   ├── PostJob.jsx
+    │   └── Signup.jsx
+    └── services/
+        ├── api.js
+        └── authService.js
+```
 
 ---
 
