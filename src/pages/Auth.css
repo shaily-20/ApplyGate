@@ -1,0 +1,143 @@
+.auth-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 20px;
+}
+
+.auth-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 450px;
+  width: 100%;
+}
+
+.auth-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #c33;
+}
+
+.success-message {
+  background-color: #efe;
+  color: #3c3;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #3c3;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #0052a3;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+}
+
+.auth-footer a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.demo-credentials {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.demo-credentials h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.demo-credentials p {
+  color: #666;
+  margin: 0.3rem 0;
+  font-family: monospace;
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .auth-card h1 {
+    font-size: 1.5rem;
+  }
+}

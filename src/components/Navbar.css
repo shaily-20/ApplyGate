@@ -1,0 +1,152 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0066cc;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  color: #0066cc;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #0066cc;
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: #0066cc;
+  text-transform: capitalize;
+}
+
+.btn-login,
+.btn-logout {
+  padding: 0.6rem 1.5rem;
+  background-color: white;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-login:hover,
+.btn-logout:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn-signup {
+  padding: 0.6rem 1.5rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-signup:hover {
+  background-color: #0052a3;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu {
+    gap: 1rem;
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .navbar-auth {
+    gap: 0.5rem;
+  }
+
+  .btn-login,
+  .btn-logout,
+  .btn-signup {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .user-info {
+    display: none;
+  }
+}
