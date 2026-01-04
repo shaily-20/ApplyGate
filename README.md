@@ -1,169 +1,113 @@
 # ApplyGate
 
-**ApplyGate** is a modern job application portal built with **React.js** on the frontend and **Express + SQLite** on the backend. It connects candidates with opportunities through a simple, structured application flow.
+**ApplyGate** is a modern job application platform built with **React.js** on the frontend and **Express with SQLite** on the backend. It enables structured interactions between candidates and employers through a role-based application workflow.
 
-This repository contains both the **frontend** (Vite + React) and a **lightweight backend** (Express + better-sqlite3).
-
----
-
-## Features
-
-- User signup & login with **JWT authentication**  
-- Support for **Employer** and **Job Seeker** roles  
-- Job listings with **search, filters, and pagination**  
-- Job posting and application workflows  
-- Local **SQLite database** with seeded sample data  
+The repository includes both the **Vite + React frontend** and a **lightweight Express backend** powered by `better-sqlite3`.
 
 ---
 
-## Repository Layout
+## Tech Stack
+
+### Frontend
+- React.js (Vite)
+- JWT-based authentication
+- Role-based routing
+
+### Backend
+- Node.js + Express
+- SQLite (`better-sqlite3`)
+- JWT authentication
+- RESTful APIs
+
+---
+
+## Core Features
+
+- Secure user authentication with **JWT**
+- Distinct roles: **Employer** and **Job Seeker**
+- Job listings with search, filters, and pagination
+- Job posting and application management
+- Seeded SQLite database for development and testing
+
+---
+
+## Project Structure
 
 ```
-/             --> Frontend (Vite + React)
-/server       --> Backend (Express + SQLite)
-```
-## 📊 Project Structure
 
-```
-Project Root
-├── Do
-├── eslint.config.js
-├── FEATURES_SUMMARY.md
-├── index.html
-├── LICENSE
-├── package.json
-├── QUICK_START.md
-├── README.md
-├── vite.config.js
-├── public/
-├── server/
-│   ├── db.js
-│   ├── index.js
-│   ├── mockDB.js
-│   ├── package.json
-│   ├── seedData.js
-│   ├── config/
-│   │   └── db.js
-│   ├── middleware/
-│   │   └── auth.js
-│   ├── models/
-│   │   ├── Job.js
-│   │   └── User.js
-│   └── routes/
-│       ├── auth.js
-│       └── jobs.js
-└── src/
-    ├── App.css
-    ├── App.jsx
-    ├── index.css
-    ├── main.jsx
-    ├── assets/
-    ├── components/
-    │   ├── AIMatcher.jsx
-    │   ├── Footer.css
-    │   ├── Footer.jsx
-    │   ├── GoogleSignIn.jsx
-    │   ├── Hero.css
-    │   ├── Hero.jsx
-    │   ├── JobCard.css
-    │   ├── JobCard.jsx
-    │   ├── JobListings.css
-    │   ├── JobListings.jsx
-    │   ├── Navbar.css
-    │   └── Navbar.jsx
-    ├── contexts/
-    │   └── AuthContext.jsx
-    ├── pages/
-    │   ├── Auth.css
-    │   ├── HomePage.css
-    │   ├── HomePage.jsx
-    │   ├── JobDetail.css
-    │   ├── JobDetail.jsx
-    │   ├── Jobs.css
-    │   ├── Jobs.jsx
-    │   ├── Login.jsx
-    │   ├── PostJob.css
-    │   ├── PostJob.jsx
-    │   └── Signup.jsx
-    └── services/
-        ├── api.js
-        └── authService.js
+/
+├── src/            # Frontend (Vite + React)
+├── server/         # Backend (Express + SQLite)
+└── README.md
+
 ```
 
 ---
 
-## Prerequisites
-
-- Node.js >= 18  
-- npm (or yarn/pnpm)  
-
----
-
-## Environment Variables
+## Environment Configuration
 
 ### Backend (`server/.env`)
 
 ```
+
 PORT=5000
 JWT_SECRET=your_jwt_secret
 GOOGLE_CLIENT_ID=your_google_client_id
-```
-
-### Frontend (`.env` or `.env.local` in project root)
 
 ```
-VITE_API_URL=http://localhost:5000/api
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
+
+### Frontend (`.env` or `.env.local`)
+
 ```
 
-> ⚠️ **Do not commit real secrets**. Use `.env.example` for sharing structure without secrets.
+VITE_API_URL=[http://localhost:5000/api](http://localhost:5000/api)
+
+````
 
 ---
 
-## Quick Start (Development)
+## Getting Started (Development)
 
-### 1. Run the Frontend
+### 1. Start the Frontend
 
-```
-# from the project root
+```bash
 npm install
 npm run dev
-```
+````
 
-Frontend URL: [http://localhost:5173](http://localhost:5173)
+Frontend runs at:
+`http://localhost:5173`
 
 ---
 
-### 2. Run the Backend (in a separate terminal)
+### 2. Start the Backend
 
-```
+```bash
 cd server
 npm install
-npm run dev   # uses nodemon
-# or npm start for a one-time run
+npm run dev   # nodemon
+# or
+npm start
 ```
 
-Backend API base: `http://localhost:5000/api`
+API base URL:
+`http://localhost:5000/api`
 
 ---
 
-### Test Accounts (Seeded)
+## Test Credentials (Seeded Data)
 
-- **Job Seeker:** `user@example.com` / `password123`  
-- **Employer:** `employer@example.com` / `password123`  
+* **Job Seeker**
+  `user@example.com` / `password123`
 
----
-
-## Stop the Project
-
-- Press `Ctrl+C` in each terminal running a server.  
-- Stop any background services with your OS process manager.
+* **Employer**
+  `employer@example.com` / `password123`
 
 ---
 
-## Prepare for GitHub
+## GitHub Preparation
 
-- Ensure `.gitignore` includes:
+Ensure the following entries exist in `.gitignore`:
 
 ```
 node_modules/
@@ -174,43 +118,51 @@ server/allowSignup.json
 dist/
 ```
 
-- Create `.env.example` files for frontend & backend with keys only (no secrets).  
-- Remove any sensitive information from the repo history before pushing.
+Recommended:
+
+* Add `.env.example` files for frontend and backend
+* Remove sensitive data from commit history before pushing
 
 ---
 
-## Build for Production (Optional)
+## Production Build (Optional)
 
-### Frontend (Vite)
-```
+### Frontend
+
+```bash
 npm run build
 ```
 
 ### Backend
-Deploy the `/server` folder to your hosting environment.  
-Ensure:
-- `NODE_ENV=production`  
-- `PORT` is set  
 
----## Live Demo
+Deploy the `/server` directory with:
 
-The React frontend is being deployed on Vercel.  
-**Status:** Under process.
-
-[Visit Live App](https://applygate-git-main-shaily-20s-projects.vercel.app)
-
+* `NODE_ENV=production`
+* Proper `PORT` configuration
 
 ---
-## Notes & Next Steps
 
-- Consider moving from **file-based SQLite auth** to a **managed database** for production.  
-- Configure **Google Sign-In** for production using `GOOGLE_CLIENT_ID`.  
-- Add **CI/CD** with GitHub Actions to run lint/tests and build on push.
+## Live Demo
+
+Frontend deployment (Vercel):
+**Status:** In progress
+
+🔗 [https://applygate-git-main-shaily-20s-projects.vercel.app](https://applygate-git-main-shaily-20s-projects.vercel.app)
+
+---
+
+## Future Enhancements
+
+* Migrate from SQLite to a managed database for scalability
+* Enable Google Sign-In for production
+* Add CI/CD with GitHub Actions
+* Improve validation and test coverage
 
 ---
 
 ## License
 
-
-This project is licensed under the **MIT License**.  
+This project is licensed under the **MIT License**.
 See the [LICENSE](LICENSE) file for details.
+
+
