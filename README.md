@@ -149,6 +149,7 @@ Frontend deployment (Vercel):
 
 🔗 [https://applygate-git-main-shaily-20s-projects.vercel.app](https://applygate-git-main-shaily-20s-projects.vercel.app)
 
+
 ---
 
 ## Future Enhancements
